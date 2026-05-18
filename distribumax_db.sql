@@ -109,14 +109,18 @@ INSERT INTO categorias (nombre, descripcion) VALUES
 INSERT INTO productos (nombre, descripcion, precio_unitario, id_categoria) VALUES
   ('Yerba 1kg',     'Yerba mate molida',     1500.00, 1),
   ('Aceite 1.5L',   'Aceite de girasol',     2800.00, 1),
+  ('Fideos 500g',   'Fideos guiseros',        650.00, 1),
+  ('Azucar 1kg',    'Azucar comun',           950.00, 1),
   ('Gaseosa 2.25L', 'Gaseosa cola',          1800.00, 2),
   ('Lavandina 1L',  'Lavandina concentrada',  900.00, 3);
 
 INSERT INTO stock (id_producto, cantidad, stock_minimo) VALUES
   (1, 85, 20),
   (2, 12, 20),
-  (3, 60, 25),
-  (4, 30, 10);
+  (3, 40, 15),
+  (4,  8, 25),
+  (5, 60, 25),
+  (6, 30, 10);
 
 INSERT INTO clientes (nombre, direccion, telefono, email) VALUES
   ('Almacen El Sol',  'Av. Illia 123',  '2664-111111', 'elsol@mail.com'),
@@ -191,7 +195,3 @@ DELETE FROM pedidos        WHERE id_pedido = 1;
 -- Verificacion
 SELECT * FROM pedidos;
 SELECT * FROM detalle_pedido;
-
--- =====================================================================
--- Fin del script
--- =====================================================================
